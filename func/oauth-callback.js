@@ -49,7 +49,7 @@ export async function handler(event, context) {
     
             if (!result.ok) {
                 console.log(data);
-                throw new Error("Ошибка получения токена человека");
+                throw new Error("💥 Ошибка получения токена участника");
             }
     
             const user = await getUserInfo(data.access_token);
