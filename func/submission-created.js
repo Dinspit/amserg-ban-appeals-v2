@@ -35,14 +35,14 @@ export async function handler(event, context) {
             return {
                 statusCode: 303,
                 headers: {
-                    "Location": `/error?msg=${encodeURIComponent("Вы не можете подать аппеляцию с этого аккаунта.")}`,
+                    "Location": `/error?msg=${encodeURIComponent("Вы не можете подать апелляцию с этого аккаунта 😯")}`,
                 },
             };
         }
         
         const message = {
             embed: {
-                title: "Новая аппеляция была подана!!",
+                title: "<:logBanRemoved:1108000420829352036> Новая апелляция была подана!",
                 timestamp: new Date().toISOString(),
                 fields: [
                     {
@@ -56,10 +56,6 @@ export async function handler(event, context) {
                     {
                         name: "Почему именно Вы должны быть разбанены?",
                         value: payload.appealText.slice(0, MAX_EMBED_FIELD_CHARS)
-                    },
-                    {
-                        name: "Что Вы сделаете, чтобы не получить бан в будущем?",
-                        value: payload.futureActions.slice(0, MAX_EMBED_FIELD_CHARS)
                     }
                 ]
             }
@@ -88,7 +84,7 @@ export async function handler(event, context) {
                     components: [{
                         type: 2,
                         style: 5,
-                        label: "Принять аппеляцию и разбанить человека",
+                        label: "Принять апелляцию и разбанить участника",
                         url: `${unbanUrl.toString()}?token=${encodeURIComponent(createJwt(unbanInfo))}`
                     }]
                 }];
