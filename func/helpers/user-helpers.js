@@ -14,7 +14,7 @@ export async function getUserInfo(token) {
 
     if (!result.ok) {
         console.log(data);
-        throw new Error("Failed to get user information");
+        throw new Error("Ошибка получения информации о пользователе");
     }
 
     return data;
@@ -38,7 +38,7 @@ export async function getBan(userId, guildId, botToken) {
         return null;
     } else {
         console.log(await result.json());
-        throw new Error("Failed to get user ban");
+        throw new Error("Ошибка выдачи бана пользователю!");
     }
 }
 
