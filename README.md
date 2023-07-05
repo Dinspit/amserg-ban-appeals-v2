@@ -1,5 +1,7 @@
 # Апелляции на Бана AmSerg Games
 
+[Оригинал](https://github.com/sylveon/discord-ban-appeals)
+
 ## Blocking users
 
 Users that spam requests can be blocked by creating an environment variable called `BLOCKED_USERS`, which should contain a comma-separated list of quoted user IDs. To do this:
